@@ -344,7 +344,6 @@ Function New-AGMLibGCEInstanceDiscovery ([string]$discoveryfile,[switch]$nobacku
                 write-host "$ct Processing this selection"
                 $cred
             }
-            # we need to learn the srcid
             $credgrab = ($srccredgrab | where-object {($_.credentialid -eq $cred.credentialid) -and ($_.applianceid -eq $cred.applianceid)})
             if ($credgrab.credentialid)
             {
